@@ -1,7 +1,6 @@
 @extends('adminlte.master')
 
 @section('content')
-  @csrf
   <div class="mx-2 py-2">
     <form action="/questions" method="POST">
       @csrf

@@ -4,13 +4,14 @@ use Illuminate\Support\Facades\DB;
 
 class AnswerModel{
   public static function get_all(){
-    $answer = DB::table('question')->get();
+    $answer = DB::table('answer')->get();
     return $answer;
   }
 
   public static function save($data){
-    $new_item = DB::table('question')->insert($data);
-    return $new_item;
+    $new_item = DB::table('answer')->insert($data);
+    $answer = DB::table('answer')->get();
+    return $answer;
   }
 }
  ?>

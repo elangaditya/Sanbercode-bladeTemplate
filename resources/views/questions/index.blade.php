@@ -6,7 +6,8 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Question</th>
+        <th scope="col" style="width:75%">Question</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
@@ -14,6 +15,7 @@
         <tr>
           <td>{{$key + 1}}</td>
           <td>{{$item->content}}</td>
+          <td><a href="/answer/{{$item->id}}"><button type="button" class="btn btn-outline-primary">View Answers</button></a></td>
         </tr>
       @endforeach
     </tbody>

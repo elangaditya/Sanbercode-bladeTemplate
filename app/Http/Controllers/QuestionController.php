@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\QuestionModel;
+
 class QuestionController extends Controller
 {
     public function index(){
       $questions = QuestionModel::get_all();
-      // dd($questions);
+      // dd(compact('questions'));
       return view('questions.index', compact('questions'));
     }
 

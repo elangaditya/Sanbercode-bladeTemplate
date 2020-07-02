@@ -24,3 +24,7 @@ Route::get('/questions', 'QuestionController@index');
 Route::get('/questions/create', 'QuestionController@create');
 
 Route::post('/questions', 'QuestionController@store');
+
+Route::get('/answer/{id}', ['uses' => 'AnswerController@index']);
+
+Route::post('/answer/{id}', ['uses' => 'AnswerController@store']);
